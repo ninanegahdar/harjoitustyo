@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Kirjaudu sisään</title>
+    <link rel="stylesheet" th:href="@{/bootstrap.min.css}">
+</head>
+<body>
+<div class="container mt-5">
+<div class="card shadow-sm">
+<div class="card-body">
+    <h2 class="text-center mb-4">Kirjaudu ylläpitäjänä 🔐</h2>
+        <form th:action="@{/login}" method="post">
+        <div class="mb-3">
+            <label class="form-label">Käyttäjänimi</label>
+            <input type="text" name="username" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Salasana</label>
+            <input type="password" name="password" class="form-control" required>
+                </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-success">Kirjaudu</button>
+            </div>
+        </form>
+    </div>
+    </div>
+</div>
+    <footer th:fragment="footer" class="text-center mt-5"></footer>
+</body>
+</html>

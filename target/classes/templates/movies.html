@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+    lang="en">
+<head>
+    <link type="text/css" rel="stylesheet" href="/bootstrap.min.css" th:href="@{/bootstrap.min.css}" />
+    <title>Elokuvat</title>
+</head>
+<body>
+
+<div th:replace="fragments :: header"></div>
+
+<div class="container mt-5" style="max-width: 100%;">
+<h1 class="text-center mb-4">Elokuvat 🎬</h1>
+
+<form th:action="@{/search}" method="get" class="d-flex justify-content-center mb-4">
+    <input type="text" name="keyword" placeholder="Hae nimellä tai ohjaajalla"
+    class="form-control w-25 me-2" />
+
+    <select name="genreId" class="form-select w-25 me-2">
+        <option value="">Kaikki genret</option>
+        <option th:each="g : ${genres}" th:value="${g.id}" th:text="${g.name}"></option>
+    </select>
+    <button type="submit" class="btn btn-basic">Haku</button>
+</form>
+<table class="table table-striped text-center align-middle">
+    <thead class="table-dark">
+    <tr>
+        <th>Nimi</th>
+        <th>Ohjaaja</th>
+        <th>Vuosi</th>
+        <th>Genre</th>
+        <th>Arvio</th>
+        <th>Muokkaa</th>
+        <th>Poista</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="movie : ${movies}">
+        <td th:text="${movie.title}">Nimi</td>
+        <td th:text="${movie.director}">Ohjaaja</td>
+        <td th:text="${movie.releaseYear}">Vuosi</td>
+        <td th:text="${movie.genre.name}">Genre</td>
+        <td th:text="${movie.rating}">Arvio</td>
+        <td>
+            <a th:href="@{'/editMovie/' + ${movie.id}}" class="btn btn-secondary btn-sm">Muokkaa</a>
+        </td>
+        <td>
+            <a th:href="@{'/delete/{id}'(id=${movie.id})}" class="btn btn-danger btn-sm">Poista</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div class="text-center mt-4">
+    <a href="/add" class="btn btn-success">Lisää elokuva</a>
+</div>
+</div>
+<div th:replace="fragments :: footer"></div>
+</body>
+</html>

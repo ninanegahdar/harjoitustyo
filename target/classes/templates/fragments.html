@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}">Elokuvakirjasto</title>
+    <link rel="stylesheet" th:href="@{/bootstrap.min.css}">
+</head>
+<body>
+
+<header th:fragment="header">
+  <div style="background-color: #222; color: white; text-align: center; padding: 40px; font-size: 2rem; position: relative;">
+    
+
+    <!-- näkyy jos käyttäjä on kirjautunut -->
+    <div sec:authorize="isAuthenticated()" style="position: absolute; top: 20px; right: 20px;">
+      <form th:action="@{/logout}" method="post" style="display:inline;">
+        <button type="submit" class="btn btn-outline-light btn-sm">Kirjaudu ulos</button>
+      </form>
+    </div>
+
+    <!-- käyttäjä ei ole kirjautunut -->
+    <div sec:authorize="!isAuthenticated()" style="position: absolute; top: 20px; right: 20px;">
+      <a th:href="@{/login}" class="btn btn-light btn-sm">Kirjaudu sisään</a>
+    </div>
+  </div>
+</header>
+
+<footer th:fragment="footer" class="text-center mt-5">
+    <hr>
+    <p>&copy; 2025 Elokuvakirjasto 🍿</p>
+</footer>
+
+</body>
+</html>

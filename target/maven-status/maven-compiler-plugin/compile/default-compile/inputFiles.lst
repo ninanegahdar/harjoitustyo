@@ -1,0 +1,10 @@
+/Users/nina/Documents/9/School/Syksy25/HH.be./harjoitustyo/src/main/java/elokuvakirjasto/harjoitustyo/HarjoitustyoApplication.java
+/Users/nina/Documents/9/School/Syksy25/HH.be./harjoitustyo/src/main/java/elokuvakirjasto/harjoitustyo/WebSecurityConfig.java
+/Users/nina/Documents/9/School/Syksy25/HH.be./harjoitustyo/src/main/java/elokuvakirjasto/harjoitustyo/domain/Genre.java
+/Users/nina/Documents/9/School/Syksy25/HH.be./harjoitustyo/src/main/java/elokuvakirjasto/harjoitustyo/domain/GenreRepository.java
+/Users/nina/Documents/9/School/Syksy25/HH.be./harjoitustyo/src/main/java/elokuvakirjasto/harjoitustyo/domain/Movie.java
+/Users/nina/Documents/9/School/Syksy25/HH.be./harjoitustyo/src/main/java/elokuvakirjasto/harjoitustyo/domain/MovieRepository.java
+/Users/nina/Documents/9/School/Syksy25/HH.be./harjoitustyo/src/main/java/elokuvakirjasto/harjoitustyo/web/GenreController.java
+/Users/nina/Documents/9/School/Syksy25/HH.be./harjoitustyo/src/main/java/elokuvakirjasto/harjoitustyo/web/LoginController.java
+/Users/nina/Documents/9/School/Syksy25/HH.be./harjoitustyo/src/main/java/elokuvakirjasto/harjoitustyo/web/MovieController.java
+/Users/nina/Documents/9/School/Syksy25/HH.be./harjoitustyo/src/main/java/elokuvakirjasto/harjoitustyo/web/MovieRestController.java
