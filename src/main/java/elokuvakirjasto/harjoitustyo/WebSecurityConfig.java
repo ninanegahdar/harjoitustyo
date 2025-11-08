@@ -18,7 +18,7 @@ public class WebSecurityConfig {
     public SecurityFilterChain configure(HttpSecurity http) throws Exception {
         http
             .authorizeHttpRequests(authorize -> authorize
-                .requestMatchers("/", "/index", "/movies", "/search", "/css/**", "/bootstrap.min.css").permitAll()
+                .requestMatchers("/", "/index", "/movies", "/search", "/css/**", "/bootstrap.min.css", "/h2-console/**").permitAll()
                 .requestMatchers("/add", "/editMovie/**", "/delete/**", "/genres/**").hasRole("ADMIN")
                 .anyRequest().authenticated()
             )
@@ -28,7 +28,11 @@ public class WebSecurityConfig {
             )
             .logout((logout) -> logout
             .logoutSuccessUrl("/movies")
-            .permitAll());
+            .permitAll()
+            )
+
+            .headers(headers -> headers.frameOptions().sameOrigin())
+            .csrf(csrf -> csrf.ignoringRequestMatchers("/h2-console/**"));
 
         return http.build();
     }
