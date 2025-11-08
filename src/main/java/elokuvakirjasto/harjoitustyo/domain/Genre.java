@@ -66,6 +66,15 @@ public class Genre {
     public void setMovies(List<Movie> movies) {
         this.movies = movies;
     }
+    @Override
+    public String toString() {
+    return "Genre{" +
+        "id=" + id +
+        ", name='" + name + '\'' +
+        ", description='" + description + '\'' +
+        '}';
+}
+
 }
 
     
