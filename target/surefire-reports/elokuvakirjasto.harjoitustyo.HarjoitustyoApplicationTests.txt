@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: elokuvakirjasto.harjoitustyo.HarjoitustyoApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.527 s -- in elokuvakirjasto.harjoitustyo.HarjoitustyoApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.745 s -- in elokuvakirjasto.harjoitustyo.HarjoitustyoApplicationTests

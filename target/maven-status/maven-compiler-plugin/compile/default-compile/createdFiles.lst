@@ -1,0 +1,10 @@
+elokuvakirjasto/harjoitustyo/WebSecurityConfig.class
+elokuvakirjasto/harjoitustyo/domain/MovieRepository.class
+elokuvakirjasto/harjoitustyo/web/LoginController.class
+elokuvakirjasto/harjoitustyo/web/MovieRestController.class
+elokuvakirjasto/harjoitustyo/web/GenreController.class
+elokuvakirjasto/harjoitustyo/web/MovieController.class
+elokuvakirjasto/harjoitustyo/domain/GenreRepository.class
+elokuvakirjasto/harjoitustyo/domain/Movie.class
+elokuvakirjasto/harjoitustyo/domain/Genre.class
+elokuvakirjasto/harjoitustyo/HarjoitustyoApplication.class
